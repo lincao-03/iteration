@@ -52,6 +52,15 @@ check that this works
 mean_and_sd(x_vec)
 ```
 
+## Motivate and write another one
+```{r}
+source("source/sim_mean_sd.R")
+```
+
+```{r}
+sim_mean_sd(n_obs=50, mu=150, sigma=30)
+sim_mean_sd(50, 150, 30)
+```
 
 
 
