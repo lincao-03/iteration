@@ -84,3 +84,41 @@ z_score(rpois(40, lambda=12))
 z_score(c(TRUE, FALSE))
 z_score(3)
 ```
+
+## Mean and sd
+
+``` r
+mean(x_vec)
+```
+
+    ## [1] 17.79765
+
+``` r
+sd(x_vec)
+```
+
+    ## [1] 55.86002
+
+write a function that returns the mean and sd of an input vector
+
+``` r
+mean_and_sd = function(x) {
+  return_df = 
+    tibble(
+      mean = mean(x),
+      sd = sd(x)
+    )
+  return(return_df)
+}
+```
+
+check that this works
+
+``` r
+mean_and_sd(x_vec)
+```
+
+    ## # A tibble: 1 × 2
+    ##    mean    sd
+    ##   <dbl> <dbl>
+    ## 1  17.8  55.9

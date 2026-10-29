@@ -1,6 +1,6 @@
 ---
 title: "writing_functions"
-output: html_document
+output: github_document
 ---
 
 ```{r}
@@ -37,7 +37,20 @@ z_score(c(TRUE, FALSE))
 z_score(3)
 ```
 
+## Mean and sd
+```{r}
+mean(x_vec)
+sd(x_vec)
+```
+write a function that returns the mean and sd of an input vector
+```{r}
+source("source/mean_and_sd.R")
+```
 
+check that this works
+```{r}
+mean_and_sd(x_vec)
+```
 
 
 
