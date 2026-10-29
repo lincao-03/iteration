@@ -62,6 +62,30 @@ sim_mean_sd(n_obs=50, mu=150, sigma=30)
 sim_mean_sd(50, 150, 30)
 ```
 
+## Fix things
+```{r}
+source("source/asdf.R")
+
+fellowship_df = 
+  lotr_import(cell_range = "B3:D6", movie_title="fellowship")
+
+two_tower_df = 
+  lotr_import(cell_range = "F3:H6", movie_title="two_towers")
+
+return_df = 
+  lotr_import(cell_range = "J3:L6", movie_title="return_of_king")
+```
+
+```{r}
+nsduh_url = "https://www.samhsa.gov/data/sites/default/files/NSDUHsaeShortTermCHG2015/NSDUHsaeShortTermCHG2015.htm"
+
+nsduh_html = read_html(nsduh_url)
+
+source("source/nsduh_process.R")
+
+marj_df = 
+  nsduh_process(html = drug_use_html, table_num = 1)
+```
 
 
 
