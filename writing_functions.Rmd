@@ -1,0 +1,54 @@
+---
+title: "writing_functions"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(rvest)
+
+set.seed(1)
+```
+
+```{r}
+x_vec = rnorm(n=40, mean=12, sd=63)
+(x_vec - mean(x_vec)) / sd(x_vec)
+```
+
+```{r}
+z_score = function(x) {
+  if (!is.numeric(x)) {
+    stop("Input x must be numeric")
+  } else if (length(x) < 5) {
+    stop("x should have 5 or more")
+  }
+  z = (x - mean(x)) / sd(x)
+  return (z)
+}
+```
+
+```{r}
+z_score(x_vec)
+z_score(rpois(40, lambda=12))
+```
+
+```{r eval = FALSE}
+z_score(c(TRUE, FALSE))
+z_score(3)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
